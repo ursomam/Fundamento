@@ -1,29 +1,178 @@
-<!--essa é a estrutura de um comentário em html-->
-<!--informa ao navegador que está documento está utulizando html em sua estrutura e qual é a versão (em geral a mais recente)-->
 <!DOCTYPE html>
-<!--comando principal, todo cometeúdo deve estar dentro desse comando. o atributo lang indica em qual idioma o site foi desenvolvido.-->
-<html lang="pt-br">
-<!--mudar a linguagem do site-->
-<!--este comando contém os metadados, informações que não serão exibidas diretamente na pág. web mas que são essenciais para o seu bom funcionamento. Ex. conexões, suporte á caracteres-->
+<html lang="pt-br>
 <head>
-    <!--Dá um suporte para exibir corretamente as palavras com acentos, cedilha e caracter especial-->
-    <meta charset="UTF-8">
-    <!--Auxiliar a responsividade do site em dispositvos móveis ou seja, define a largura da página, igual (similar) a largura da tela do celular-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Define o título da página que aparece na aba do navegador-->
-    <title>Fundamentos</title>
-</head>
-<!--Início da página web, toda parte visível ou conteudo queirá aparecer so usuário estará dentro dessa comando-->
-    <body>
-        <!--comando de inserção de títulos-->
-        <h1>Título com TAG h1</h1>
-        <h2>Título com TAG h2</h2>
-        <h3>Título com TAG h3</h3>
-        <h4>Título com TAG h4</h4>
-        <h5>Título com TAG h5</h5>
-        <h6>Título com TAG h6</h6>
-        <!--Para parãgrafos maiores com conteúdo utilizamos o comando p-->
-        <p>Ao utilizar a TAG P para criar parãgrafos, temos um tamanho padrão de letra e espaçamento entre linhas, que pode ser modificado pelo css.</p>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏄‍♀️Praias do Brasil🏄‍♂️</title>
+<!--link para conexão do arquivo externo do CSS-->
+<link rel="stylesheet" href="style.css">
+<!--CSS interno-->
 
-    </body><!--Fechamento do comando TAG body-->
-</html><!--Fechamento do comando TAG html-->
+</head>
+
+<body>
+     <!--Criando um lista para o menu do site-->
+    <ul id="barraNavegacao">
+        <li class="menu"><a href="#copacabana">Copacabana</a></li>
+        <li class="menu"><a href="#cuidadosverao">Cuidados no Verão</a></li>
+        <li class="menu"><a href="#dicas">Dicas</a></li>
+        <li class="menu"><a href="#VisiteTambem">Visite outras praias</a></li>
+    </ul>
+    <!--Criando a estrutura do menu check - menu que aparecerá quando a tela estiver pequena-->
+    <!--Criar um checkbox que ficará invisivel e servirá de gatilho para abrir/fechar o menu-->
+    <input type="checkbox" id="menu-check">
+    <!--Cria um rótulo clicável que aciona o check box acima, ele sabe que precisa acionar o check box acima devido ao parâmetro menu-check passado no atributo for, que corresponde ao msm id od imput type checkbox-->
+    <label for="menu-check" class="menuicone">&#9776;Menu</label>
+    <nav class="mobile-menu">
+        <a id="barraNavegacao">
+        <a href="#copacabana">Copacabana</a>
+        <a href="#cuidadosverao">Cuidados no Verão</a>
+        <a href="#dicas">Dicas</a></li>
+        <a href="#VisiteTambem">Visite outras praias</a>
+    </nav>
+    
+    <h1>Praias do Brasil</h1>
+    <!--Estrutura de organização das informações dentro de uma pág, web(Titulo da pagaina que você vai criar, exemplo Studio MySantiago..)-->
+      
+
+        <section id="copacabana">
+        <h3>Copacabana - RJ</h3>
+        <!--Adiciona uma imagem, possui o atributo src onde referencia a imagem (onde está) e o alt axulia na acessibilidade além de exibir o txt na tela quando a imagem falhar(voçê pega uma imagem e coloca no site Exemplo: uma imagem do salão da Michelle)-->
+        <div>
+        <img src="/img/praia copacabana.png"
+            alt="imagem da praia de copacabana no icõnico calçadão em um dia de sol e muito calor">
+            <img src="/praia div.jpg" alt="imagem 2">
+            
+        <h2>Restaurantes recomendados</h2>
+        <!--Criando uma lista ordenada-->
+        <!--1 primeiro item da lista-->
+        </div>
+        <ul><!--Estrutura de lista não ordenada-->
+            <li>Nossa primeira recomendação é o restaurante
+                <a href="https://marius.com.br/">Marius</a>, conhecido por sua cozinha Brasileira e mediterrãnea.
+            </li>
+            <!--2ºsegundo item da lista(no caso descrição)-->
+            <li>Nosso segundo recomendação é o restaurante <a
+                    href="https://botecomane.com.br/unidades/rio-de-janeiro/copacabana-praia/?gclid=Cj0KCQjw0erBBhDTARIsAKO8iqQueRkk-8UnsUNejZ__eLVeHZ0EcJpce9pnSmYJRGtSyHKuEfccuWkaAqyBEALw_wcB">Mané
+                    copacaban</a>O Mané mistura o conceito de boteco tradicional com a linguagem de restaurante
+                contemporâneo e oferece uma experiência f*#@. Que tal conhecer o boteco mais amado da galera em
+                Copacabana Praia?</li>
+            <li>
+                <!--3ºterceiro item da lista-->
+            <li>Nossa terceira recomendação é o restaurante <a href="https://fogodechao.com.br/">Fogodechão</a>Um
+                restaurante Gaucho nascido em 1975</li>
+            <ul></ul><!--Fim da lista não ordenada-->
+            <h2>o que fazer em Copacabana</h2>
+            <ol><!--Inicio da lista ordenada(ou lista de opções do que fazer ou titulos)-->
+                <li>O Clássico: você pode tomar sol, pegar um bronze, nadar ou simplismente relxar na areia com uma água
+                    de coco.</li>
+                <li>Forte de copacabana: Museu Histórico do Exército / Forte de Copacabana computa atualmente um fluxo
+                    de cerca de dez mil visitantes por mês, constituindo-se em um dos mais belos cartões-postais da
+                    cidade. O turista pode escolher entre a visita restrita (apenas às áreas externas) e a completa
+                    (incluindo o interior do forte e o Museu histórico-militar). </li>
+                <li>Feirinha de copacabana: A Feira de Copacabana é uma ótima opção para comprar lembrancinhas com temas
+                    do Rio de Janeiro a um precinho camarada e recebem até no cartão de crédito. Lá os preços são bem
+                    abaixo dos daqueles praticados nas lojas em outros pontos turísticos como o pão-de-açúcar e o Cristo
+                    Redentor por exemplo. </li>
+
+            </ol>
+       
+
+    <h3></h3>
+    <img src="" alt="">
+    <h2>Mais opções do que fazer em Copacabana</h2>
+    <ul>
+        <li>Nossa primeira recomendação para passeios é: oteleférico do Brasil e conecte-se à natureza em um passeio
+            memorável entre a Praia Vermelha, Morro da Urca e o Morro do Pão de Açúcar,<a
+                href="https://bondinho.com.br/">Bondinho Pão de Açucar</a>É mais que um passeio de bondinho. E muito mais
+            do que uma vista de tirar o fôlego. Aqui você vive uma experiência completa: história, cultura, natureza e
+            entretenimento. E sempre há algo novo, tornando cada visita única.</li>
+        <li>Nossa segunda recomendação para passeios é: Cristo Redentor,Inaugurado em 12 de outubro de 1931, o Cristo
+            Redentor é muito mais do que um símbolo do Rio de Janeiro; é um ícone global. Essa majestosa estátua,
+            presente em todas as representações da Cidade Maravilhosa e do Brasil, oferece vistas deslumbrantes e uma
+            experiência inesquecível. Venha conhecer de perto um dos monumentos mais famosos do mundo em nosso passeio!
+            <a href="https://www.tremdocorcovado.rio/">Tour no Rio de Janeiro completo</a> </li>
+        <li>Nossa terceira opição é o hotel Sol Ipanema, não da para viajar sem um bom lugar para se ospedar né... <a
+                href="https://www.solipanema.com.br/">Solipanema</a> Os 90 apartamentos do Sol Ipanema Hotel estão
+            prontos para oferecer o que há de melhor em conforto. Com cores elegantes, decoração e móveis funcionais,
+            piso de madeira laminado e TV Smart em todos os quartos. Uma linda vista para o mar pode ser apreciada em
+            todos os apartamentos Luxo e Família frente mar. </li>
+        <h2>opções de lugares para sair</h2>
+    </ul>
+    <li>Nossa primeira opção para sair anoite se você for solteiro é o Tatu bola bar grelha ,<a
+            href="https://tatubola.alifegroup.com.br/reservas?gad_source=1&gad_campaignid=21715625951&gbraid=0AAAAA9c5xblbnEJL0VbvOz_o_hxIiTgwx&gclid=Cj0KCQjwu7TCBhCYARIsAM_S3NgzLwqVU1ZmXauGI-bLEbS6S1lOZVbAJ_Cu21a3RGf6a2KlA6WdTm8aAoo5EALw_wcB">Tatu
+            Bola Bar </a>A melhor experiência de bar pertinho de você! Musica ao vivo, chopp estupidamente gelado,
+        petiscos de boteco e uma atmosfera mágica, com o que o brasileiro tem de melhor Felicidade!</li>
+    </ul>
+    </section>
+    <section id="cuidadosverao">
+        <img src="/praia.avif" alt="">
+        <h2>CUIDADOS NO VERÃO</h2>
+        <P>Para aproveitar o verão nas praias, é importante tomar alguns cuidados, como usar protetor solar, manter-se
+            hidratado...</P>
+        <ul>
+            <li>Fique longe do limão</li>
+            <li>Abuse do protetor solar(e de roupas com fotoproteção)</li>
+            <li>Tenha cuidado com a alimentação</li>
+            <li>Evite nadar logo após comer</li>
+            <li>Não fique muito tempo com roupa de banho molhada</li>
+            <li>Não esqueça de proteger os olhos</li>
+            <li>Cuidado com a bebida alcoólica em excesso</li>
+            <li>Não esqueça de beber bastante água</li>
+        </ul>
+    </section>
+    <section id="dicas">
+        <h2>Dicas para não perder crianças na praia</h2>
+        <p>Em praias movimentadas, é essencial ficar atento ás crianças, Algumas dicas incluem estabelecer um ponto de
+            encontro, indentificar as crianças com pulseiras...</p>
+        <img src="/familia-feliz-de-cinco-pessoas-sorrindo-na-praia_1398-4073.avif" alt="">
+        <h2>8 Dicas importantes</h2>
+        
+        <li>1 Mantenha um ponto de encontro definido</li>
+        <li>2 Use opulseiras de indentificação nas crianças</li>
+        <li>3 Ensine à crianças seus nomes completos e números de telefone</li>
+        <li>4 Esteja atento à localização das salva-vidas</li>
+        <li>5 Evite praias muito movimentadas</li>
+        <li>6 Incentive as crianças a não se fastarem muito</li>
+        <li>7 Use uma barraca ou guarda-sol colordo como ponto de referência</li>
+        <li>8 Esteja ciente dos arredores e identifique os pontos de referência fixos</li>
+    </section>
+    <section id="VisiteTambem">
+        <h2>Visite também</h2>
+        <!--A div também é uma estrutura organizadora de elementos-->
+        <div>
+            <!--Construindo cards-->
+            <!--Card n 1°-->
+            <div class="card" style="width: 18rem;">
+                <img src="/praia Ubatuba.jfif" alt="" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Praia Ubatuba</h5>
+                    <p class="card-text">Venha conhecer Ubatuba</p>
+                    <a href="https://guia.melhoresdestinos.com.br/praias-de-ubatuba.html" class="btn">visitar</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="/praia grande.jfif" alt="" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Praia Grande</h5>
+                <p class="card-text">Venha conhecer a Praia Grande</p>
+                <a href="https://cidades.ibge.gov.br/brasil/sp/praia-grande/panorama" class="btn">Visitar</a>
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="/praia enseada.jfif" alt="" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Praia da Enseada</h5>
+                <p class="card-text">Venha conhecer a Praia da Enseada</p>
+                <a href="https://portalguaruja.tur.br/atracoes/praia-da-enseada/">Visitar</a>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
